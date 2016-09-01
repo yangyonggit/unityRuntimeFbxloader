@@ -65,6 +65,44 @@ namespace fbxImporter
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Vector4")]
+  public partial class Vector4 : global::ProtoBuf.IExtensible
+  {
+    public Vector4() {}
+    
+    private float _x;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"x", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
+    public float x
+    {
+      get { return _x; }
+      set { _x = value; }
+    }
+    private float _y;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"y", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
+    public float y
+    {
+      get { return _y; }
+      set { _y = value; }
+    }
+    private float _z;
+    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"z", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
+    public float z
+    {
+      get { return _z; }
+      set { _z = value; }
+    }
+    private float _w;
+    [global::ProtoBuf.ProtoMember(4, IsRequired = true, Name=@"w", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
+    public float w
+    {
+      get { return _w; }
+      set { _w = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"UPolygon")]
   public partial class UPolygon : global::ProtoBuf.IExtensible
   {
@@ -138,6 +176,27 @@ namespace fbxImporter
     {
       get { return _scaling; }
       set { _scaling = value; }
+    }
+    private fbxImporter.Vector3 _localtranslation;
+    [global::ProtoBuf.ProtoMember(4, IsRequired = true, Name=@"localtranslation", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public fbxImporter.Vector3 localtranslation
+    {
+      get { return _localtranslation; }
+      set { _localtranslation = value; }
+    }
+    private fbxImporter.Vector4 _localrotation;
+    [global::ProtoBuf.ProtoMember(5, IsRequired = true, Name=@"localrotation", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public fbxImporter.Vector4 localrotation
+    {
+      get { return _localrotation; }
+      set { _localrotation = value; }
+    }
+    private fbxImporter.Vector3 _localscaling;
+    [global::ProtoBuf.ProtoMember(6, IsRequired = true, Name=@"localscaling", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public fbxImporter.Vector3 localscaling
+    {
+      get { return _localscaling; }
+      set { _localscaling = value; }
     }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
